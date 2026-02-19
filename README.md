@@ -1,160 +1,49 @@
-# 🖖 StarTucom Census App
+﻿# ðŸ–– Star Trek Census Application (Java OOP)
 
-<div align="center">
+<p align="center">
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java" />
+  <img src="https://img.shields.io/badge/OOP-Polymorphism_%26_Inheritance-007396?style=for-the-badge" alt="OOP" />
+  <img src="https://img.shields.io/badge/Theme-Sci--Fi_Simulation-047857?style=for-the-badge" alt="Simulation" />
+  <img src="https://img.shields.io/badge/Academic-1Âº_DAW_STUCOM-10B981?style=for-the-badge" alt="STUCOM" />
+</p>
 
-![Star Trek GIF](https://media.giphy.com/media/3ohs7KViF6rA4aan5u/giphy.gif)
-
-[![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.java.com/)
-[![NetBeans](https://img.shields.io/badge/NetBeans-1B6AC6?style=for-the-badge&logo=apache-netbeans-ide&logoColor=white)](https://netbeans.apache.org/)
-[![MVC](https://img.shields.io/badge/Pattern-MVC-blueviolet?style=for-the-badge)](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
-[![OOP](https://img.shields.io/badge/OOP-Herencia%20%26%20Polimorfismo-success?style=for-the-badge)](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming))
-
-> *"Space: the final frontier..."* — El rey **Kert Rats** del multiverso StarTucom necesita censar a su pueblo. ¡Y tú eres el encargado!
-
-</div>
+> ðŸŽ“ **Academic Project Notice:** Developed as an academic practical project for the **1st year of Web Application Development (DAW)** at **STUCOM Pelai** (Barcelona) within the Object-Oriented Programming module (MP0485).
 
 ---
 
-## 🌌 ¿Qué es esto?
+## ðŸ“Œ Overview / DescripciÃ³n General
 
-Aplicación de consola en **Java** para gestionar el censo de planetas y seres del multiverso **StarTucom**. Desarrollada con patrón **Modelo-Vista-Controlador**, herencia y polimorfismo.
+### ðŸ‡¬ðŸ‡§ English
+A themed planetary census application developed in **Java** that simulates the demographic registration and management of sentient galactic species across various planets in the Star Trek universe. The project emphasizes advanced OOP concepts: abstract classes, inheritance trees, method overriding, and dynamic collections.
 
-Práctica de **M03 Programación · UF4** — DAW · STUCOM
-
----
-
-## 👾 Especies del multiverso
-
-| Especie | Nivel Civ. | Característica especial |
-|---------|-----------|------------------------|
-| 🧑 **Humano** | I | Edad (0-130) y género |
-| 🖖 **Vulcaniano** | III | Índice de meditación (0-10) |
-| 🔵 **Andoriano** | II | Rango + puede ser Aenar |
-| ✨ **Nibiriano** | II | Vegetariano o come peces |
-| ⚔️ **Klingon** | III | Nivel de fuerza (50-350) |
-| 💰 **Ferengi** | I | Cantidad de Latinum |
+### ðŸ‡ªðŸ‡¸ EspaÃ±ol
+AplicaciÃ³n de censo planetario desarrollada en **Java** que simula el registro y control demogrÃ¡fico de diferentes especies galÃ¡cticas en planetas del universo Star Trek. El proyecto pone en prÃ¡ctica los conceptos nucleares de la POO: clases abstractas, jerarquÃ­as de herencia, polimorfismo y manejo dinÃ¡mico de colecciones.
 
 ---
 
-## ⚠️ Reglas de convivencia
+## ðŸŒŒ Domain Model & Alien Species
 
-```
-🧑 Humanos        →  Pueden vivir en CUALQUIER planeta
-🖖 Vulcanianos    →  NO pueden coincidir con Andorianos
-🔵 Andorianos     →  NO pueden coincidir con Vulcanianos
-⚔️ Klingon        →  NO pueden vivir en planetas de clima CÁLIDO
-✨ Nibiriano veg.  →  Solo en planetas con FLORA ROJA
-✨ Nibiriano peces →  Solo en planetas con SERES ACUÁTICOS
-💰 Ferengi        →  NO pueden vivir en planetas FRÍOS
-```
-
----
-
-## 🗂️ Estructura del proyecto
-
-```
-StarTucom/
-└── src/
-    ├── Main.java
-    ├── model/
-    │   ├── Ser.java           ← Clase abstracta base
-    │   ├── Humano.java
-    │   ├── Vulcaniano.java
-    │   ├── Andoriano.java
-    │   ├── Nibiriano.java
-    │   ├── Klingon.java
-    │   ├── Ferengi.java
-    │   └── Planeta.java
-    ├── controller/
-    │   └── CensusController.java
-    └── view/
-        └── Menu.java
-```
+- **Ser.java (Abstract Base Class):** Base definition for any galactic being (name, age, species, homeworld, traits).
+- **Species Subclasses:**
+  - Humano.java: Adaptable beings with civilian identifiers.
+  - Klingon.java: Warrior caste attributes, honor code, and battle status.
+  - Ferengi.java: Latinum wealth tracking and business negotiations.
+  - Andoriano.java: Cold resistance traits and clan lineage.
+  - Nibiriano.java: Indigenous planetary traits.
+- **Planeta.java:** Aggregates inhabitant populations and calculates species ratios.
+- **CensusController.java:** Coordinates census registration, demographic queries, and statistical reports.
 
 ---
 
-## 🧬 Diagrama de herencia
+## ðŸš€ How to Run
 
-```
-                        Ser (abstract)
-                           │
-        ┌──────┬───────┬───┴───┬─────────┬────────┐
-        │      │       │       │         │        │
-     Humano Vulcan. Andor. Nibirian.  Klingon  Ferengi
-```
+`ash
+mvn clean compile
+mvn exec:java -Dexec.mainClass="com.mycompany.starstucom.CensusController"
+`
 
 ---
 
-## 📋 Funcionalidades
+## ðŸ“„ License
 
-- [x] **1.** Registrar planeta *(con validación de clima, capacidad, flora y fauna)*
-- [x] **2.** Censar un ser *(validando reglas de convivencia)*
-- [x] **3.** Borrar un ser del censo
-- [x] **4.** Listado de seres agrupados por planeta
-- [x] **5.** Modificar propiedades numéricas de un ser
-- [x] **6.** Mostrar todos los seres de una especie
-- [x] **0.** Salir
-- [x] 💾 Persistencia de datos en `Planetas.txt` *(serialización en tiempo real)*
-
----
-
-## 🖥️ Ejemplo de salida
-
-```
-**********************************************
-************ SERES POR PLANETA ***************
-**********************************************
-Planeta: Vulcano
-[ Galaxia: Cuadrante Beta - Capacidad: 20 - Clima: Cálido - Flora Roja ]
---->  Población  <---
-Vulcaniano: Spock - Nivel de meditación: 10
-Ferengi: Quark - Latinum: 100
-**********************************************
-Planeta: Andor
-[ Galaxia: Cuadrante Alfa - Capacidad: 10 - Clima: Frío ]
---->  Este planeta no tiene seres registrados <---
-**********************************************
-```
-
----
-
-## 🚀 Cómo ejecutarlo
-
-### Con NetBeans
-1. Abre NetBeans → `File > Open Project`
-2. Selecciona la carpeta `StarTucom`
-3. Click derecho en el proyecto → `Set as Main Project`
-4. Pulsa **Run** (F6) 🎮
-
-### Con terminal
-```bash
-# Compilar
-javac -d out src/model/*.java src/controller/*.java src/view/*.java src/Main.java
-
-# Ejecutar
-java -cp out Main
-```
-
----
-
-## 🛠️ Tecnologías
-
-- **Java** (JDK 8+)
-- **NetBeans IDE**
-- Serialización con `ObjectOutputStream` / `ObjectInputStream`
-- Patrón **MVC**
-- **Herencia y Polimorfismo**
-
----
-
-## 👨‍💻 Autor
-
-<div align="center">
-
-**ignac** · DAW · STUCOM Barcelona
-
-![Star Trek Bye](https://media.giphy.com/media/l4FB5yXHoVSheWQ5a/giphy.gif)
-
-*"Un Ferengi sin riqueza no es un Ferengi"*
-
-</div>
+Distributed under the **MIT License**.
