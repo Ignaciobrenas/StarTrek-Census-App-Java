@@ -16,7 +16,7 @@ Star Trek Census Application (Java OOP)
 ### English
 A themed planetary census application developed in **Java** that simulates the demographic registration and management of sentient galactic species across various planets in the Star Trek universe. The project emphasizes advanced OOP concepts: abstract classes, inheritance trees, method overriding, and dynamic collections.
 
-### EspaÃ±ol
+### Español
 AplicaciÃ³n de censo planetario desarrollada en **Java** que simula el registro y control demogrÃ¡fico de diferentes especies galÃ¡cticas en planetas del universo Star Trek. El proyecto pone en prÃ¡ctica los conceptos nucleares de la POO: clases abstractas, jerarquÃ­as de herencia, polimorfismo y manejo dinÃ¡mico de colecciones.
 
 ---
